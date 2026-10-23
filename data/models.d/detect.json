@@ -1,0 +1,10 @@
+{
+    "name": "detect",
+    "modelPath": "/usr/share/esca/models/detect.tflite",
+    "backend": ["XNNPACK", "CPU"],
+    "performance_mode": "DEFAULT",
+    "threads": 3,
+    "preload": false,
+    "log_level": "INFO",
+    "debug_mode": false
+}

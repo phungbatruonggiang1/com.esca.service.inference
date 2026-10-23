@@ -1,0 +1,17 @@
+[Unit]
+Description=ESCA AI inference service
+Requires=dbus.socket
+After=dbus.socket
+
+[Service]
+Type=dbus
+BusName=vn.sparc.esca.Inference1
+ExecStart=/usr/sbin/esca-inferenced
+Restart=on-failure
+RestartSec=2
+# Root, to create tensor buffers owned by the inference group and to read
+# model files wherever they are installed.
+User=root
+
+[Install]
+WantedBy=multi-user.target
